@@ -43,6 +43,9 @@ printf("Directory %s not found",d);
 
 break;
 case 3:
+printf("enter name of the directory")
+scanf("%s",d);
+for(i=0;i<dcnt;i++)
 
 default:
     break;
