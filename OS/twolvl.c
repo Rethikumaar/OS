@@ -20,7 +20,11 @@ int main()
 scanf("%d",&ch);
 switch (ch)
 {
-case 1
+case 1:
+printf("\nEnter name of directory--");
+scanf("%s",dir[dcnt].dname);
+dir[dcnt].fcnt=0;
+dcnt++;
     break;
 
 default:
