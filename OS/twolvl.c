@@ -16,7 +16,7 @@ while(1)
 {
     printf("\n\n1.Create directory\t2.Create file\t3.Delete file");
     printf("\n4.Search file\t Display\t6.Exit\n Enter your choice");
-    scnf("%d",&ch);
+    scanf("%d",&ch);
     switch(ch)
     {
     case 1:
@@ -83,11 +83,28 @@ while(1)
                         printf("File %s is found",f);
                         goto jmp1;
                     }
-              
-              }
-              
+                }
+                printf("File%s not found",f);
+                goto jmp1;
+                printf("directory %s not found",d);
+            jmp1:
+                break;
+    case 5:
+        if(dcnt==0)
+            printf("\nNo Directory");
+        else
+        {
+            printf("\nDirectory\tFiles");
+            for(i=0;i<dcnt;i++)
+            {
+                printf("\n%s\t\t",dir[i].dname);
+                for(k=0;k<dir[i].fcnt;k++)
+                printf("\t%s",dir[i].fname[k]);
             }
         }
+            }
+        }
+        break;
     }
 }
 }
