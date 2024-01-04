@@ -21,11 +21,28 @@ scanf("%d",&ch);
 switch (ch)
 {
 case 1:
-printf("\nEnter name of directory--");
+printf("\nEnter name of file directory--");
 scanf("%s",dir[dcnt].dname);
 dir[dcnt].fcnt=0;
 dcnt++;
     break;
+case 2:
+printf("\n Enter the name of the directory--");
+scanf("%s",f);
+for(i=0;i<dcnt;i++)
+{
+if(strcmp(f,dir[i].dname[i])==0)
+{
+printf("Enter the file--");
+scanf("%s",dir[i].fname[dir[i].fcnt]);
+dir[i].fcnt++;
+printf("File created");
+}
+if(i==dcnt)
+printf("Directory %s not found",d);
+
+break;
+case 3:
 
 default:
     break;
