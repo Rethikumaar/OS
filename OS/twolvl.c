@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<conio.h>
 #include<string.h>
-#include<stdlib.H>
+#include<stdlib.h>
 struct
 {
 char dname[10], fname[10][10];
@@ -15,7 +15,7 @@ dcnt=0;
 while(1)
 {
     printf("\n\n1.Create directory\t2.Create file\t3.Delete file");
-    printf("\n4.Search file\t Display\t6.Exit\n Enter your choice");
+    printf("\n4.Search file\t 5.Display\t6.Exit\n Enter your choice");
     scanf("%d",&ch);
     switch(ch)
     {
@@ -102,9 +102,12 @@ while(1)
                 printf("\t%s",dir[i].fname[k]);
             }
         }
+        break;
+    default:
+        exit(0);
             }
         }
-        break;
+        getch();
     }
 }
 }
