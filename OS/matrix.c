@@ -40,14 +40,43 @@ int main()
         printf("%d",Max[i][j]);
         printf("\t\t");
         for ( j = 0; j < r; j++)
-       printf("%d",allaoc[i][j]);
+       printf("%d",alloc[i][j]);
+        printf("\n");
+      }
+      process=-1;
+      for ( i = 0; i < p; i++)
+      {
+        if(completed[i]==0)
+        {
+            process=i;
+            for(j=0;j<r;j++)
+            {
+                if(avail[j]<need[i][j])
+                {
+                    process=-1;
+                    break;
+                }
+            }
+        }
+        if(process!=-1)
+        break;
+
+      }
+      if(process!=-1)
+      {
+        printf("\nProcess %d runs to completion!",process+1);
+        safeSequence[count]=process+1;
+        count++;
+        for ( j = 0; j < r; j++)
+        {
+            
+        }
         
       }
     } 
-    }
+    
     
 
-    
     
     
 }
