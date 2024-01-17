@@ -69,14 +69,25 @@ int main()
         count++;
         for ( j = 0; j < r; j++)
         {
-            
+            avail[j]+=alloc[process][j];
+            alloc[process][j]=0;
+            Max[process][j]=0;
+            completed[process]=1;
+
         }
         
       }
     } 
-    
-    
-
-    
-    
+    while (count!=p&& process!=-1);
+    if(count==p)
+    {
+        printf("\n The system is in a safe state!!\n");
+        printf("Safe Sequence :<");
+        for(i=0;i<p;i++)
+        printf("%d",safeSequence[i]);
+        printf("\n");
+        
+    }
+    else
+    printf("\n The system is in an unsafe state!!");  
 }
