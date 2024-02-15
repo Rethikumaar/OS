@@ -3,8 +3,9 @@
 #include<sys/types.h>
 #include<unistd.h>
 #include<stdio.h>
+#define MAX_BUF 1024
 int main() {
-char fd;
+int fd;
 
 char *myfifo="/tmp/myfifo";
 char buf[MAX_BUF];
